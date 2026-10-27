@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "emr-extractor"
+version = "0.1.0"
+description = "Extract, structure, and redact scanned medical records"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+keywords = ["medical-records", "ocr", "pdf", "redaction"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = [
+    "Pillow>=10,<13",
+    "PyMuPDF>=1.24,<2",
+]
+
+[project.optional-dependencies]
+llm = ["openai>=2,<3"]
+ocr = [
+    "numpy>=1.26,<3",
+    "paddleocr[doc-parser]>=3.7,<4",
+    "tqdm>=4.66,<5",
+]
+mineru = ["mineru>=4,<5"]
+all = [
+    "mineru>=4,<5",
+    "numpy>=1.26,<3",
+    "openai>=2,<3",
+    "paddleocr[doc-parser]>=3.7,<4",
+    "tqdm>=4.66,<5",
+]
+
+[project.scripts]
+emr-extractor = "emr_extractor.cli:main"
+
+[project.urls]
+Documentation = "https://yyyanbj.github.io/emr-extractor/"
+Homepage = "https://github.com/yyyanbj/emr-extractor"
+Issues = "https://github.com/yyyanbj/emr-extractor/issues"
+Repository = "https://github.com/yyyanbj/emr-extractor.git"
+
+[dependency-groups]
+dev = [
+    "build>=1.2,<2",
+    "pytest>=8,<10",
+    "ruff>=0.14,<1",
+]
+docs = ["mkdocs>=1.6,<2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]

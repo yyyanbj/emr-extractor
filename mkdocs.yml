@@ -1,0 +1,23 @@
+site_name: EMR Extractor
+site_description: Extract, structure, and redact scanned medical records
+site_url: https://yyyanbj.github.io/emr-extractor/
+repo_url: https://github.com/yyyanbj/emr-extractor
+repo_name: yyyanbj/emr-extractor
+edit_uri: edit/main/docs/
+
+theme:
+  name: readthedocs
+  locale: zh_CN
+
+nav:
+  - 首页: index.md
+  - 使用指南: usage.md
+  - 部署与离线运行: deployment.md
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+
+strict: true
