@@ -2,7 +2,7 @@
 
 从 PDF、JPG 或 PNG 病例中提取 Markdown 与图片，将文本整理为 JSON，并按字段或坐标遮盖敏感信息。
 
-[在线文档](https://yyyanbj.github.io/emr-extractor/) · [部署指南](https://yyyanbj.github.io/emr-extractor/deployment/)
+[在线文档](https://www.bj-yan.top/emr-extractor/) · [部署指南](https://www.bj-yan.top/emr-extractor/deployment/)
 
 > [!WARNING]
 > 本项目处于 Alpha 阶段，不保证自动识别出全部个人信息，也不等同于完成匿名化。对外分享前必须人工复核输出文件；不要把真实患者资料放进 Issue、测试夹具或 Git 仓库。

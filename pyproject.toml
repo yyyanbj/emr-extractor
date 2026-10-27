@@ -46,7 +46,7 @@ all = [
 emr-extractor = "emr_extractor.cli:main"
 
 [project.urls]
-Documentation = "https://yyyanbj.github.io/emr-extractor/"
+Documentation = "https://www.bj-yan.top/emr-extractor/"
 Homepage = "https://github.com/yyyanbj/emr-extractor"
 Issues = "https://github.com/yyyanbj/emr-extractor/issues"
 Repository = "https://github.com/yyyanbj/emr-extractor.git"
